@@ -1,1 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("./images/newBG2.jpeg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+
+
+body,
+::after,
+::before {
+  box-sizing: border-box !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+*{
+  color: white;
+}
