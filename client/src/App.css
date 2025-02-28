@@ -3,7 +3,7 @@
 .App {
   min-height: 100vh;
   display: flex;
-  background-image: url("./images/newBG2.jpeg");
+  background-image: url("./images/darkBG.jpg");
   background-repeat:no-repeat;
   background-size:cover;
 }

@@ -20,11 +20,12 @@ export default function Home() {
     const navigate = useNavigate();
     
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("userInfo" ));
-        if (user) navigate('/chats');
-        }, [navigate]);
+        const user = JSON.parse(localStorage.getItem("userInfo"));
 
-
+        if (window.location.pathname === "/chats" && !user) {
+            navigate("/");
+        }
+    },[navigate]);
 
 
 
