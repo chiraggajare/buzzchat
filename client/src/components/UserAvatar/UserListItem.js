@@ -9,12 +9,12 @@ const UserListItem = ({ user, handleFunction }) => {
       onClick={handleFunction}
       sx={{
         cursor: "pointer",
-        backgroundColor: "black",
+        backgroundColor: "rgba(0, 0, 0, 0.4)",
         '&:hover': {
-          backgroundColor: "#38B2AC",
+          backgroundColor: "#f77f00",
           color: "black",
         },
-        width: "31vh",
+        width: "30vh",
         display: "flex",
         alignItems: "center",
         color: "black",

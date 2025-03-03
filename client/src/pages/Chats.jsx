@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ChatState } from "../Context/chatProvider";
+import { ChatState } from "../Context/ChatProvider";
 import { Box } from "@mui/material";
 import SideDrawer from "../components/miscellaneous/SideDrawer";
 import MyChats from "../components/MyChats";

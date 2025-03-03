@@ -4,11 +4,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CloseIcon from '@mui/icons-material/Close';
-import { ChatState } from '../../Context/chatProvider';
 import ProfileModal from './ProfileModal';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import UserListItem from '../UserAvatar/UserListItem';
+import UserListItem from '../UserAvatar/UserListItem'
+import { ChatState } from '../../Context/ChatProvider';
+
+
 
 const SideDrawer = () => {
   const [search, setSearch] = useState("");
@@ -76,7 +78,7 @@ const SideDrawer = () => {
       const config = {
         headers: { "Content-type": "application/json", Authorization: `Bearer ${user.token}` },
       };
-      const { data } = await axios.post(`/api/chat`, { userId }, config);
+      const { data } = await axios.post(`/api/chats`, { userId }, config);
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
       setLoadingChat(false);
@@ -119,7 +121,7 @@ const SideDrawer = () => {
 
       {/* MUI Side Drawer */}
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}
-        sx={{ '& .MuiDrawer-paper': { backgroundColor: 'rgb(46, 46, 46)', width: 400 } }}>
+        sx={{ '& .MuiDrawer-paper': { backgroundColor: 'rgb(46, 46, 46)', width: 340 } }}>
         <Box sx={{ p: 2 }}>
           <IconButton onClick={toggleDrawer(false)} sx={{ color: 'white' }}>
             <CloseIcon />
@@ -144,7 +146,7 @@ const SideDrawer = () => {
               <CircularProgress />
             </Box>
           ) : (
-            <Box sx={{ maxHeight: '50vh', overflowY: 'auto' }}>
+            <Box sx={{ maxHeight: '40vh', overflowY: 'auto' }}>
               {searchResult?.map((user) => (
                 <UserListItem key={user._id} user={user} handleFunction={() => accessChat(user._id)} />
               ))}
