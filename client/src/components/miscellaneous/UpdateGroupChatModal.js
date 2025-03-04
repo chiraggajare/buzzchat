@@ -52,7 +52,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         headers: { Authorization: `Bearer ${user.token}` },
       };
       const { data } = await axios.put(
-        `/api/chat/rename`,
+        `/api/chats/rename`,
         { chatId: selectedChat._id, chatName: groupChatName },
         config
       );
@@ -76,7 +76,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         headers: { Authorization: `Bearer ${user.token}` },
       };
       const { data } = await axios.put(
-        `/api/chat/groupadd`,
+        `/api/chats/groupadd`,
         { chatId: selectedChat._id, userId: user1._id },
         config
       );
@@ -98,7 +98,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         headers: { Authorization: `Bearer ${user.token}` },
       };
       const { data } = await axios.put(
-        `/api/chat/groupremove`,
+        `/api/chats/groupremove`,
         { chatId: selectedChat._id, userId: user1._id },
         config
       );

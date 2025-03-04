@@ -124,7 +124,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               </>
             )}
           </Typography>
-          <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", p: 2, bgcolor: "#E8E8E8", width: "100%", height: "100%", borderRadius: 2, overflowY: "auto" }}>
+          <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", p: 2, bgcolor: "rgba(0, 0, 0, 0.0)", width: "100%", height: "100%", borderRadius: 2, overflowY: "auto" }}>
             {loading ? (
               <CircularProgress sx={{ alignSelf: "center", margin: "auto" }} />
             ) : (
@@ -132,7 +132,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 <ScrollableChat messages={messages} />
               </div>
             )}
-            <TextField fullWidth variant="filled" placeholder="Enter a message.." value={newMessage} onChange={typingHandler} onKeyDown={sendMessage} sx={{ mt: 2, bgcolor: "#E0E0E0" }} />
+            <TextField fullWidth variant="filled" placeholder="Enter a message.." value={newMessage} onChange={typingHandler} onKeyDown={sendMessage} sx={{ mt: 2, bgcolor: "rgb(255, 255, 255)" }} />
           </Box>
         </>
       ) : (

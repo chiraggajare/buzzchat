@@ -121,7 +121,7 @@ const MyChats = ({ fetchAgain }) => {
                     : chat.chatName}
                 </Typography>
                 {chat.latestMessage && (
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="white">
                     <b>{chat.latestMessage.sender.name}: </b>
                     {chat.latestMessage.content.length > 50
                       ? `${chat.latestMessage.content.substring(0, 51)}...`

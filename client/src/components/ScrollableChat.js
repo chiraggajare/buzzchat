@@ -23,7 +23,7 @@ const ScrollableChat = ({ messages }) => {
             )}
             <Typography
               sx={{
-                backgroundColor: m.sender._id === user._id ? "#BEE3F8" : "#B9F5D0",
+                backgroundColor: m.sender._id === user._id ? "#1b4332" : "#3d348b",
                 marginLeft: isSameSenderMargin(messages, m, i, user._id),
                 marginTop: isSameUser(messages, m, i, user._id) ? 0.5 : 1.5,
                 borderRadius: "20px",
